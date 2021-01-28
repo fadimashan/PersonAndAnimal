@@ -57,7 +57,6 @@ namespace Uppgift3
                 if (value.Length <= 2)
                 {
                     throw new ArgumentNullException("Error!");
-
                 }
                 else
                 {
