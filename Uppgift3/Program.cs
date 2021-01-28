@@ -13,8 +13,12 @@ namespace Uppgift3
             Util util = new Util();
             PersonHandler personHandler = new PersonHandler();
             List<Person> personList = new List<Person>();
-            List<PersonHandler> phList = new List<PersonHandler>();
-            var _logger = LogManager.GetLogger("test for loger");
+            NumericInputError numericInputError = new NumericInputError();
+            TextInputError textInputError = new TextInputError();
+            List<UserError> userErrorsList = new List<UserError>() { 
+            numericInputError, textInputError
+            };
+
             string name = "";
             string lastname = "";
             int age = 0;
@@ -61,7 +65,7 @@ namespace Uppgift3
             util.writeLine("choose an option");
             while (loop)
             {
-                util.writeLine("\n1 for add new person \n2 for print all persons\n3 for edit persone details\n4 to Exit\n5 to get Animls states\n6 to print Dogs list");
+                util.writeLine("\n1 for add new person \n2 for print all persons\n3 for edit persone details\n4 to Exit\n5 to get Animls states\n6 to print Dogs list\n7 to print out the UserError");
                 var option = util.read();
                 var num = 0;
 
@@ -159,7 +163,14 @@ namespace Uppgift3
                         */
 
                         break;
+                    case 7:
 
+                        foreach (UserError error in userErrorsList) {
+
+                            util.writeLine(error.UEMessage());
+                        }
+
+                        break;
 
                 }
 
