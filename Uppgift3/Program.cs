@@ -15,8 +15,11 @@ namespace Uppgift3
             List<Person> personList = new List<Person>();
             NumericInputError numericInputError = new NumericInputError();
             TextInputError textInputError = new TextInputError();
+            One firstMethod = new One();
+            Two secondMethod = new Two();
+            Three thirdMethod = new Three();
             List<UserError> userErrorsList = new List<UserError>() { 
-            numericInputError, textInputError
+            numericInputError, textInputError,firstMethod,secondMethod,thirdMethod
             };
 
             string name = "";
@@ -36,7 +39,7 @@ namespace Uppgift3
             var p3 = personHandler.CreatePerson(27, "Fadi", "HHHHH", 10, 9);
             personList.Add(p3);
 
-            // Animals
+            // Adding some animals to the Animal list
             Horse horse = new Horse("Horse", 2, 23);
             Dog dog = new Dog("Dog", 2, 10);
             Dog dog2 = new Dog("Dog2", 12, 15);
@@ -99,7 +102,8 @@ namespace Uppgift3
 
                         personHandler.edit(personList[util.paresToInt(userNumber, output) - 1]);
 
-                       // personList.RemoveAt(output-1);
+                        // remove item 
+                        //personList.RemoveAt(output-1);
                         break;
 
                     case 4:
