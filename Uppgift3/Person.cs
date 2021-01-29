@@ -4,17 +4,17 @@ using System.Text;
 
 namespace Uppgift3
 {
-    class Person
+    public class Person
     {
 
         Util util = new Util();
 
 
-        private int Age;
-        private string FName;
-        private string LName;
-        private double Height;
-        private double Weight;
+        protected int Age;
+        protected string FName;
+        protected string LName;
+        protected double Height;
+        protected double Weight;
 
         public int Age1
         {
@@ -111,6 +111,12 @@ namespace Uppgift3
 
         public Person()
         {
+        }
+
+
+        public string details(Person per)
+        {
+            return ($"The person name is: {per.FName} {per.LName}");
         }
     }
 

@@ -9,15 +9,16 @@ namespace Uppgift3
     {
         string DoSound();
     }
-    abstract class Animal : IAnimal
+    public abstract class Animal : IAnimal
     {
 
         // In this class we should put the new attribute that will be used in for all the animals we have
-        private string name;
-        private double weight;
-        private int age;
+        //private string name;
+        //private double weight;
+        //private int age;
 
 
+        
         public string AnimalName { get; set; }
         public int AnimalAge { get; set; }
         public double AnimalWeight { get; set; }
@@ -38,10 +39,14 @@ namespace Uppgift3
             AnimalWeight = weight;
         }
 
+        public Animal()
+        {
+
+        }
     }
 
 
-    class Dog : Animal
+    public class Dog : Animal
     {
         private string specialty;
         public string Loyalty { get => specialty; set => specialty = "Very loyal"; }
@@ -53,6 +58,8 @@ namespace Uppgift3
             Loyalty = specialty;
 
         }
+
+        public Dog() { }
         // class dog is subclass to class animal, so class dog can take from animal but not the other way around
         public void newMethod() { }
         public override string DoSound() => "Dog say: Woff Woff\n";
