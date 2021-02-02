@@ -10,29 +10,29 @@ namespace Uppgift3
 
         public void SetAge(Person pers, int age)
         {
-            pers.Age1 = age;
+            pers.Age = age;
             return;
         }
 
-        public int Age { get; set; }
-        public string Name { get; set; }
-        public string Lastname { get; set; }
-        public double Height { get; set; }
-        public double Weight { get; set; }
+        //public int Age { get; set; }
+        //public string Name { get; set; }
+        //public string Lastname { get; set; }
+        //public double Height { get; set; }
+        //public double Weight { get; set; }
 
 
         public Person CreatePerson(int age, string fname, string lname, double height, double weight) {
             Person per = new Person();
-            Age = age;
-            Name = fname;
-            Lastname = lname;
-            Height = height;
-            Weight = weight;
-            per.Age1 = age ;
-            per.FName1 = fname;
-            per.LName1 = lname;
-            per.Height1 = height;
-            per.Weight1 = weight;
+            //Age = age;
+            //Name = fname;
+            //Lastname = lname;
+            //Height = height;
+            //Weight = weight;
+            per.Age = age ;
+            per.FName = fname;
+            per.LName = lname;
+            per.Height = height;
+            per.Weight = weight;
             return per;
         }
 
@@ -61,7 +61,7 @@ namespace Uppgift3
                     success = true;
                     util.writeLine("Enter a new name");
                     string name = util.read();
-                    p.FName1 = name;
+                    p.FName = name;
                     success = false;
                 }
                 catch (Exception e)
@@ -80,7 +80,7 @@ namespace Uppgift3
                     success = true;
                     util.writeLine("Enter a new lastname");
                     string lastname = Console.ReadLine();
-                    p.LName1 = lastname;
+                    p.LName = lastname;
                     success = false;
                 }
                 catch (Exception e)
@@ -97,7 +97,7 @@ namespace Uppgift3
                     success = true;
                     util.writeLine("Enter a new age");
                     int age = int.Parse(Console.ReadLine());
-                    p.Age1 = age;
+                    p.Age = age;
                     success = false;
                 }
                 catch (Exception e)
@@ -113,7 +113,7 @@ namespace Uppgift3
                     success = true;
                     util.writeLine("Enter a new height");
                     var height = double.Parse(Console.ReadLine());
-                    p.Height1 = height;
+                    p.Height = height;
                     success = false;
                 }
                 catch (Exception e)
@@ -128,7 +128,7 @@ namespace Uppgift3
                     success = true;
                     util.writeLine("Enter a new weight");
                     var weight = double.Parse(Console.ReadLine());
-                    p.Weight1 = weight;
+                    p.Weight = weight;
                     success = false;
                 }
                 catch (Exception e)
@@ -138,7 +138,7 @@ namespace Uppgift3
                 }
             } while (success);
 
-            util.writeLine($"Person name is: {p.FName1} {p.LName1}, Age is: {p.Age1}, Height is: {p.Height1} and weight is: {p.Weight1}");
+            util.writeLine($"Person name is: {p.FName} {p.LName}, Age is: {p.Age}, Height is: {p.Height} and weight is: {p.Weight}");
 
             return p;
         }

@@ -7,18 +7,18 @@ namespace Uppgift3
     class Person
     {
 
-        Util util = new Util();
+        //Util util = new Util();
 
 
-        private int Age;
-        private string FName;
-        private string LName;
-        private double Height;
-        private double Weight;
+        private int age;
+        private string fName;
+        private string lName;
+        private double height;
+        private double weight;
 
-        public int Age1
+        public int Age
         {
-            get => Age;
+            get => age;
             set
             {
                 if (value <= 0)
@@ -27,15 +27,15 @@ namespace Uppgift3
                 }
                 else
                 {
-                    Age = value;
+                    age = value;
                 }
             }
         }
 
 
-        public string FName1 
+        public string FName
         { 
-            get=> FName;
+            get=> fName;
             set { 
                 if (value.Length <= 2)
                 {
@@ -44,14 +44,14 @@ namespace Uppgift3
                 }
                 else
                 {
-                    FName = value;
+                    fName = value;
                 }
             } 
         }
 
-        public string LName1
+        public string LName
         {
-            get => LName;
+            get => lName;
             set
             {
                 if (value.Length <= 2)
@@ -60,14 +60,14 @@ namespace Uppgift3
                 }
                 else
                 {
-                    LName = value;
+                    lName = value;
                 }
             }
         }
 
-        public double Weight1
+        public double Weight
         {
-            get => Weight;
+            get => weight;
             set
             {
                 if (value <= 0)
@@ -77,14 +77,14 @@ namespace Uppgift3
                 }
                 else
                 {
-                    Weight = value;
+                    weight = value;
                 }
             }
         }
 
-        public double Height1
+        public double Height
         {
-            get => Height;
+            get => height;
             set
             {
                 if (value <= 0)
@@ -94,24 +94,22 @@ namespace Uppgift3
                 }
                 else
                 {
-                    Height = value;
+                    height = value;
                 }
             }
         }
 
-        public Person(string fName, string lName, int age, double height, double weight)
-        {
+        //public Person(string fName, string lName, int age, double height, double weight)
+        //{
 
-            FName = fName;
-            LName = lName;
-            Age = age;
-            Height = height;
-            Weight = weight;
-        }
+        //    FName = fName;
+        //    LName = lName;
+        //    Age = age;
+        //    Height = height;
+        //    Weight = weight;
+        //}
 
-        public Person()
-        {
-        }
+
     }
 
 

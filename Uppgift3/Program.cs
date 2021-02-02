@@ -29,7 +29,7 @@ namespace Uppgift3
             double weight = 0;
 
 
-            Person p = new Person(name, lastname, age, height, weight);
+            //Person p = new Person(name, lastname, age, height, weight);
 
             //using the new method in the class PersonHandler to create a new persone 
 
@@ -41,8 +41,8 @@ namespace Uppgift3
 
             // Adding some animals to the Animal list
             Horse horse = new Horse("Horse", 2, 23);
-            Dog dog = new Dog("Dog", 2, 10);
-            Dog dog2 = new Dog("Dog2", 12, 15);
+            Dog dog = new Dog("Dog", 2, 10, "Very Loyal");
+            Dog dog2 = new Dog("Dog2", 12, 15, "Not loyal at all");
             Hedgehog hedgehog = new Hedgehog("Hedgehog", 2, 7);
             Worm worm = new Worm("Worm", 1, 0.001);
             Wolf wolf = new Wolf("Wolf", 23, 70);
@@ -51,7 +51,7 @@ namespace Uppgift3
             Flamingo flamingo = new Flamingo("Flamingo", 8, 16);
             Swan swan = new Swan("Swan", 12, 24);
             WolfMan wolfMan = new WolfMan("WolfMan", 25, 90);
-            List<IAnimal> listOfAnimal = new List<IAnimal>() {
+            List<Animal> listOfAnimal = new List<Animal>() {
                             horse,dog,hedgehog,worm,wolf,bird,pelican,flamingo,swan,wolfMan,dog2
                         };
 
@@ -59,7 +59,7 @@ namespace Uppgift3
             foreach (Person per in personList)
             {
 
-                util.writeLine($"Person name is: {per.FName1} {per.LName1}, Age is: {per.Age1}, Height is: {per.Height1} and weight is: {per.Weight1}");
+                util.writeLine($"Person name is: {per.FName} {per.LName}, Age is: {per.Age}, Height is: {per.Height} and weight is: {per.Weight}");
 
             }
 
@@ -85,7 +85,7 @@ namespace Uppgift3
                     case 2:
                         for (int i = 0; i < personList.Count; i++)
                         {
-                            util.writeLine($"{i + 1}- Person name is: {personList[i].FName1} {personList[i].LName1}, Age is: {personList[i].Age1}, Height is: {personList[i].Height1} and weight is: {personList[i].Weight1}");
+                            util.writeLine($"{i + 1}- Person name is: {personList[i].FName} {personList[i].LName}, Age is: {personList[i].Age}, Height is: {personList[i].Height} and weight is: {personList[i].Weight}");
                         }
 
                         break;
@@ -95,7 +95,7 @@ namespace Uppgift3
                         util.writeLine("chose which user you want to edit, by number");
                         for (int i = 0; i < personList.Count; i++)
                         {
-                            util.writeLine($"{i + 1}- Person name is: {personList[i].FName1} {personList[i].LName1}, Age is: {personList[i].Age1}, Height is: {personList[i].Height1} and weight is: {personList[i].Weight1}");
+                            util.writeLine($"{i + 1}- Person name is: {personList[i].FName} {personList[i].LName}, Age is: {personList[i].Age}, Height is: {personList[i].Height} and weight is: {personList[i].Weight}");
                         }
                         var userNumber = util.read();
                         var output = 0;
@@ -119,7 +119,7 @@ namespace Uppgift3
                             if (animal is IPersons)
                             {
                                 IPersons human = (IPersons)animal;
-                                Console.WriteLine(human.Talk("Yes I'm a man!!"));
+                                Console.WriteLine(human.Talk());
                             }
 
                             if (animal is Animal)
@@ -185,8 +185,8 @@ namespace Uppgift3
             util.writeLine("Enter new age for the person");
             var newAge = int.Parse(Console.ReadLine());
 
-            personHandler.SetAge(p, newAge);
-            util.writeLine($"Person name is: {p.FName1} {p.LName1}, the new Age is: {p.Age1}");
+            personHandler.SetAge(p2, newAge);
+            util.writeLine($"Person name is: {p2.FName} {p2.LName}, the new Age is: {p2.Age}");
 
         }
 

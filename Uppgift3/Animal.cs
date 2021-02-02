@@ -5,18 +5,17 @@ using System.Text;
 namespace Uppgift3
 {
 
-    interface IAnimal
-    {
-        string DoSound();
-    }
-    abstract class Animal : IAnimal
+    //interface IAnimal
+    //{
+    //    string DoSound();
+    //}
+    abstract class Animal
     {
 
         // In this class we should put the new attribute that will be used in for all the animals we have
-        private string name;
-        private double weight;
-        private int age;
-
+        //private string name;
+        //private double weight;
+        //private int age;
 
         public string AnimalName { get; set; }
         public int AnimalAge { get; set; }
@@ -26,12 +25,12 @@ namespace Uppgift3
 
         public virtual string Stats()
         {
-            return $"";
+            return $"The Animal name is:{AnimalName}, age is{AnimalAge}, weight is:{AnimalWeight}, ";
         }
 
 
 
-        public Animal( string name, int age,double weight)
+        public Animal(string name, int age,double weight)
         {
             AnimalName = name;
             AnimalAge = age;
@@ -43,22 +42,22 @@ namespace Uppgift3
 
     class Dog : Animal
     {
-        private string specialty;
-        public string Loyalty { get => specialty; set => specialty = "Very loyal"; }
-        public Dog(string name, int age, double weight) : base(name, age, weight)
+        //private string specialty;
+        //public string Loyalty { get => specialty; set => specialty = "Very loyal"; }
+        public string Loyalty { get; set; }
+        public Dog(string name, int age, double weight, string loyalty) : base(name, age, weight)
         {
-            AnimalName = name;
-            AnimalAge = age;
-            AnimalWeight = weight;
-            Loyalty = specialty;
-
+            //AnimalName = name;
+            //AnimalAge = age;
+            //AnimalWeight = weight;
+            Loyalty = "very loyal";
         }
         // class dog is subclass to class animal, so class dog can take from animal but not the other way around
         public void newMethod() { }
         public override string DoSound() => "Dog say: Woff Woff\n";
         public override string Stats()
         {
-            return $"The Animal name is:{AnimalName}, age is{AnimalAge}, weight is:{AnimalWeight}, specialty is: {Loyalty}";
+            return base.Stats() + $"specialty is: {Loyalty}";
         }
 
 
@@ -71,9 +70,9 @@ namespace Uppgift3
         public Horse(string name, int age, double weight) : base(name, age, weight)
         {
 
-            AnimalName = name;
-            AnimalAge = age;
-            AnimalWeight = weight;
+            //AnimalName = name;
+            //AnimalAge = age;
+            //AnimalWeight = weight;
             Fast = specialty;
 
         }
@@ -230,10 +229,11 @@ namespace Uppgift3
 
     public interface IPersons
     { 
-        string Talk(string talk);
+        string Talk();
+
     }
 
-    class WolfMan : Wolf ,IPersons
+    class WolfMan : Wolf, IPersons
     {
         private string specialty;
         public string Changeable { get => specialty; set => specialty = "Changeable!"; }
@@ -246,7 +246,10 @@ namespace Uppgift3
         }
 
 
-        public string Talk(string talk) => talk;
+        public string Talk()
+        {
+            return "I AM A WOLFMAN";
+        }
         public override string DoSound() => "Wolf say: Waooooooo!!";
 
     }
