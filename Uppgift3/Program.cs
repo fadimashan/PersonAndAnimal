@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Uppgift3
+namespace PersonAndAnimal
 {
     class Program
     {

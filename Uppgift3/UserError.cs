@@ -1,4 +1,4 @@
-﻿namespace Uppgift3
+﻿namespace PersonAndAnimal
 {
     abstract class UserError
     {

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Xunit;
 
-namespace Uppgift3.Test
+namespace PersonAndAnimal.Test
 {
     public class PersonDetails
     {

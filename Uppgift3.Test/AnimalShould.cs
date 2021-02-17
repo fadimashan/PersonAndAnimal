@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace Uppgift3.Test
+namespace PersonAndAnimal.Test
 {
     public class AnimalShould
     {

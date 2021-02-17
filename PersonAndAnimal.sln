@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonAndAnimal", "Uppgift3\PersonAndAnimal.csproj", "{6C7B0573-140D-4D8C-8949-B54EC577C3FD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Uppgift3.Test", "Uppgift3.Test\Uppgift3.Test.csproj", "{06A1BBEA-0289-4AAE-92B9-039A99DFF60B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonAndAnimal.Test", "Uppgift3.Test\PersonAndAnimal.Test.csproj", "{06A1BBEA-0289-4AAE-92B9-039A99DFF60B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
