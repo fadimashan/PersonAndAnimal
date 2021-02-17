@@ -6,10 +6,6 @@ namespace Uppgift3
 {
     class Person
     {
-
-        //Util util = new Util();
-
-
         private int age;
         private string fName;
         private string lName;
@@ -98,19 +94,6 @@ namespace Uppgift3
                 }
             }
         }
-
-        //public Person(string fName, string lName, int age, double height, double weight)
-        //{
-
-        //    FName = fName;
-        //    LName = lName;
-        //    Age = age;
-        //    Height = height;
-        //    Weight = weight;
-        //}
-
-
     }
-
 
 }

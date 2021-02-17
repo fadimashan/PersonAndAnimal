@@ -22,15 +22,6 @@ namespace Uppgift3
             numericInputError, textInputError,firstMethod,secondMethod,thirdMethod
             };
 
-            string name = "";
-            string lastname = "";
-            int age = 0;
-            double height = 0;
-            double weight = 0;
-
-
-            //Person p = new Person(name, lastname, age, height, weight);
-
             //using the new method in the class PersonHandler to create a new persone 
 
             personList.Add(personHandler.CreatePerson(22, "Weoe", "ghggg", 17, 818));
@@ -40,17 +31,17 @@ namespace Uppgift3
             personList.Add(p3);
 
             // Adding some animals to the Animal list
-            Horse horse = new Horse("Horse", 2, 23);
-            Dog dog = new Dog("Dog", 2, 10, "Very Loyal");
-            Dog dog2 = new Dog("Dog2", 12, 15, "Not loyal at all");
-            Hedgehog hedgehog = new Hedgehog("Hedgehog", 2, 7);
-            Worm worm = new Worm("Worm", 1, 0.001);
-            Wolf wolf = new Wolf("Wolf", 23, 70);
-            Bird bird = new Bird("Bird", 1, 0.6);
-            Pelican pelican = new Pelican("Pelican", 5, 9);
-            Flamingo flamingo = new Flamingo("Flamingo", 8, 16);
-            Swan swan = new Swan("Swan", 12, 24);
-            WolfMan wolfMan = new WolfMan("WolfMan", 25, 90);
+            Horse horse = new Horse("Horse", 2, 23,"Fast");
+            Dog dog = new Dog("Dog", 2, 10, "Loyal");
+            Dog dog2 = new Dog("Dog2", 12, 15, "Not very loyal");
+            Hedgehog hedgehog = new Hedgehog("Hedgehog", 2, 7, "Spicky!");
+            Worm worm = new Worm("Worm", 1, 0.001,"Slow!");
+            Wolf wolf = new Wolf("Wolf", 23, 70,"Strong");
+            Bird bird = new Bird("Bird", 1, 0.6,"Flay");
+            Pelican pelican = new Pelican("Pelican", 5, 9,"Big beak");
+            Flamingo flamingo = new Flamingo("Flamingo", 8, 16, "Long legs");
+            Swan swan = new Swan("Swan", 12, 24,"Super white");
+            WolfMan wolfMan = new WolfMan("WolfMan", 25, 90, "Changeable");
             List<Animal> listOfAnimal = new List<Animal>() {
                             horse,dog,hedgehog,worm,wolf,bird,pelican,flamingo,swan,wolfMan,dog2
                         };

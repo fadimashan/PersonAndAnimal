@@ -5,17 +5,11 @@ using System.Text;
 namespace Uppgift3
 {
 
-    //interface IAnimal
-    //{
-    //    string DoSound();
-    //}
     abstract class Animal
     {
 
         // In this class we should put the new attribute that will be used in for all the animals we have
-        //private string name;
-        //private double weight;
-        //private int age;
+
 
         public string AnimalName { get; set; }
         public int AnimalAge { get; set; }
@@ -30,7 +24,7 @@ namespace Uppgift3
 
 
 
-        public Animal(string name, int age,double weight)
+        public Animal(string name, int age, double weight)
         {
             AnimalName = name;
             AnimalAge = age;
@@ -42,22 +36,17 @@ namespace Uppgift3
 
     class Dog : Animal
     {
-        //private string specialty;
-        //public string Loyalty { get => specialty; set => specialty = "Very loyal"; }
-        public string Loyalty { get; set; }
-        public Dog(string name, int age, double weight, string loyalty) : base(name, age, weight)
+        public string Specialty { get; set; }
+        public Dog(string name, int age, double weight, string specialty) : base(name, age, weight)
         {
-            //AnimalName = name;
-            //AnimalAge = age;
-            //AnimalWeight = weight;
-            Loyalty = "very loyal";
+            Specialty = "very loyal";
         }
         // class dog is subclass to class animal, so class dog can take from animal but not the other way around
         public void newMethod() { }
         public override string DoSound() => "Dog say: Woff Woff\n";
         public override string Stats()
         {
-            return base.Stats() + $"specialty is: {Loyalty}";
+            return base.Stats() + $"specialty is: {Specialty}";
         }
 
 
@@ -65,192 +54,134 @@ namespace Uppgift3
 
     class Horse : Animal
     {
-        private string specialty;
-        public string Fast { get=> specialty; set=> specialty = "Very fast"; }
-        public Horse(string name, int age, double weight) : base(name, age, weight)
+        public string Specialty { get; set; }
+        public Horse(string name, int age, double weight, string specialty) : base(name, age, weight)
         {
 
-            //AnimalName = name;
-            //AnimalAge = age;
-            //AnimalWeight = weight;
-            Fast = specialty;
-
+            Specialty = specialty;
         }
 
         public override string DoSound() => "Horse say: HAHAHA\n";
-       
-        public override string Stats()
-        {  
-            return $"The Animal name is:{AnimalName}, age is{AnimalAge}, weight is:{AnimalWeight}, specialty is: {Fast}";
-        }
+
+        public override string Stats() => base.Stats() + $"specialty is: {Specialty}";
+
 
     }
 
     class Hedgehog : Animal
     {
-        private string specialty;
-        public string NrOfSpikes { get => specialty; set => specialty = "Have many spikes!"; }
+        public string Specialty { get; set; }
 
-        public Hedgehog(string name, int age, double weight) : base(name, age, weight)
+        //"Have many spikes!"
+        public Hedgehog(string name, int age, double weight, string specialty) : base(name, age, weight)
         {
-            AnimalName = name;
-            AnimalAge = age;
-            AnimalWeight = weight;
-            NrOfSpikes = specialty;
+
+            Specialty = specialty;
 
         }
 
         public override string DoSound() => "Hedgehog does't do any sounds!\n";
 
 
-        public override string Stats()
-        {
-            return $"The Animal name is:{AnimalName}, age is{AnimalAge}, weight is:{AnimalWeight}, specialty is: {NrOfSpikes}";
-        }
+        public override string Stats() => base.Stats() + $"specialty is: {Specialty}";
     }
 
     class Worm : Animal
     {
         private string specialty;
 
-        public string IsPoisonous { get => specialty; set => specialty = "Is Poisonous!"; }
+        public string Specialty { get ; set ; }
 
-        public Worm(string name, int age, double weight) : base(name, age, weight)
+        public Worm(string name, int age, double weight, string specialty) : base(name, age, weight)
         {
-            AnimalName = name;
-            AnimalAge = age;
-            AnimalWeight = weight;
-            IsPoisonous = specialty;
+
+            Specialty = specialty;
 
         }
         public override string DoSound() => "Worm say: Don't stop the music!\n";
 
 
-        public override string Stats()
-        {
-            return $"The Animal name is:{AnimalName}, age is{AnimalAge}, weight is:{AnimalWeight}, specialty is: {IsPoisonous}";
-        }
+        public override string Stats() => base.Stats() + $"specialty is: {Specialty}";
+       
     }
 
     class Bird : Animal
     {
 
         //In this class we can add the new attribu that will be used in all the birds subclass
-        private string specialty;
-        public string Fly { get => specialty; set => specialty = "Fly!"; }
-       
+        public string Specialty { get; set; }
 
-        public Bird(string name, int age, double weight) : base(name, age, weight)
+
+        public Bird(string name, int age, double weight, string specialty) : base(name, age, weight)
         {
-            AnimalName = name;
-            AnimalAge = age;
-            AnimalWeight = weight;
-            Fly = specialty;
+
+            Specialty = specialty;
 
         }
 
         public override string DoSound() => "Bird say: Quack, Quack!\n";
 
 
-        public override string Stats()
-        {
-            return $"The Animal name is:{AnimalName}, age is{AnimalAge}, weight is:{AnimalWeight}, specialty is: {Fly}";
-        }
+        public override string Stats() => base.Stats() + $"specialty is: {Specialty}";
+
     }
 
     class Wolf : Animal
     {
-        private string specialty;
 
-        public string Wild { get => specialty; set => specialty = "Wild!" ; }
-        public Wolf(string name, int age, double weight) : base(name, age, weight)
+        public string Specialty { get ; set ; }
+        public Wolf(string name, int age, double weight, string specialty) : base(name, age, weight)
         {
-            AnimalName = name;
-            AnimalAge = age;
-            AnimalWeight = weight;
-            Wild = specialty;
+         
+            Specialty = specialty;
         }
 
         public override string DoSound() => "Wolf say: Waooooooo!!\n";
 
 
-        public override string Stats()
-        {
-            return $"The Animal name is:{AnimalName}, age is{AnimalAge}, weight is:{AnimalWeight}, specialty is: {Wild}";
-        }
+        public override string Stats() => base.Stats() + $"specialty is: {Specialty}";
+       
     }
 
 
 
     class Pelican : Bird
     {
-        private string specialty;
-        public string LikeWater { get => specialty; set => specialty = "Pelican likes water!"; }
 
-        public Pelican(string name, int age, double weight) : base(name, age, weight)
+        public Pelican(string name, int age, double weight, string specialty) : base(name, age, weight, specialty)
         {
-            AnimalName = name;
-            AnimalAge = age;
-            AnimalWeight = weight;
-            LikeWater = specialty;
         }
 
     }
 
     class Flamingo : Bird
     {
-        private string specialty;
-        public string FlyHeigh { get => specialty; set => specialty = "Fly heigh!"; }
-
-        public Flamingo(string name, int age, double weight) : base(name, age, weight)
+        public Flamingo(string name, int age, double weight, string specialty) : base(name, age, weight, specialty)
         {
-            AnimalName = name;
-            AnimalAge = age;
-            AnimalWeight = weight;
-            FlyHeigh = specialty;
         }
 
     }
 
     class Swan : Bird
     {
-        private string specialty;
-        public string Breeds { get => specialty; set => specialty = "Bleaches!"; }
-
-        public Swan (string name, int age, double weight) : base(name, age, weight)
+        public Swan(string name, int age, double weight, string specialty) : base(name, age, weight, specialty)
         {
-            AnimalName = name;
-            AnimalAge = age;
-            AnimalWeight = weight;
-            Breeds = specialty;
         }
 
     }
 
     public interface IPersons
-    { 
+    {
         string Talk();
 
     }
 
     class WolfMan : Wolf, IPersons
     {
-        private string specialty;
-        public string Changeable { get => specialty; set => specialty = "Changeable!"; }
-        public WolfMan (string name, int age, double weight ) : base(name, age, weight)
+        public WolfMan(string name, int age, double weight, string specialty) : base(name, age, weight, specialty)
         {
-            AnimalName = name;
-            AnimalAge = age;
-            AnimalWeight = weight;
-            Changeable = specialty;
+    
         }
-
-
-        public string Talk()
-        {
-            return "I AM A WOLFMAN";
-        }
-        public override string DoSound() => "Wolf say: Waooooooo!!";
-
+        public string Talk() => "I AM A WOLFMAN";
     }
 }

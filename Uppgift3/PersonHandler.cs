@@ -14,20 +14,8 @@ namespace Uppgift3
             return;
         }
 
-        //public int Age { get; set; }
-        //public string Name { get; set; }
-        //public string Lastname { get; set; }
-        //public double Height { get; set; }
-        //public double Weight { get; set; }
-
-
         public Person CreatePerson(int age, string fname, string lname, double height, double weight) {
             Person per = new Person();
-            //Age = age;
-            //Name = fname;
-            //Lastname = lname;
-            //Height = height;
-            //Weight = weight;
             per.Age = age ;
             per.FName = fname;
             per.LName = lname;
