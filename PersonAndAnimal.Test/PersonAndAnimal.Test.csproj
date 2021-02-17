@@ -19,8 +19,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Uppgift3\PersonAndAnimal.csproj" />
-  </ItemGroup>
-
 </Project>
